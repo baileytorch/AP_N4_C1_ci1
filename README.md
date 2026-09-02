@@ -2,8 +2,8 @@
 Clases de Backend con Django
 
 Como buenos desarrolladores, ya debemos tener creado un repositorio para trabajar el código de la aplicación que debemos construir.
-    - Si no ha trabajado aún con repositorios, he construido una pequeña guía paso a paso que está disponible en sus ambientes de aprendizaje.
-    - El proyecto que debe construir cada uno se ha asignado con anterioridad y puede encontrar la información en su ambiente de aprendizaje.
+- Si no ha trabajado aún con repositorios, he construido una pequeña guía paso a paso que está disponible en sus ambientes de aprendizaje.
+- El proyecto que debe construir cada uno se ha asignado con anterioridad y puede encontrar la información en su ambiente de aprendizaje.
 
 ## Creación de Proyectos con Django
 
