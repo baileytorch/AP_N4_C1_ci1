@@ -86,7 +86,7 @@ Como buenos desarrolladores, ya debemos tener creado un repositorio para trabaja
     django-admin startapp nombre_aplicacion
     ```
 
-    - El comando anterior creó un nuevo directorio llamado nombre_aplicacion, el que debería ser cambiado por un nombre descriptivo de su aplicación.
+    - El comando anterior creó un nuevo directorio llamado *nombre_aplicacion*, igual que en los casos anteriores, este nombre debería ser cambiado por un nombre descriptivo de su aplicación.
     - Dentro de este directorio encontraremos los archivos:
         - *admin.py*: Django posee un administrador que podría permitirnos hacer *CRUD* de nuestro modelo de datos y en este archivo registramos los elementos de nuestro modelo para permitirle al admin de Django realizar este proceso.
         - *apps.py*: Permite definir configuraciones específicas y metadatos de nuestra aplicación.
