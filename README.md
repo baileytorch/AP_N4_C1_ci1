@@ -92,7 +92,7 @@ Como buenos desarrolladores, ya debemos tener creado un repositorio para trabaja
         - *apps.py*: Permite definir configuraciones específicas y metadatos de nuestra aplicación.
         - *models.py*: Permite definir el *MODELO DE DATOS* que soportará nuestra aplicación. Contiene clases que representan tablas de nuestra base de datos y que serán mapeadas por nuestro ORM (Object Relational Mapping).
         - *tests.py*: Acá podremos definir nuestros *TESTS UNITARIOS* para validar automáticamente la lógica de nuestra aplicación, los modelos y las vistas.
-        - *views.py*: Este el núcleo de nuestra aplicación. Aca tendremos la lógica que recibirá una solicitud *REQUEST* y enviará la respectiva respuesta *RESPONSE*. Responde al patrón de diseño *Modelo Vista Plantilla*, obteniendo data de los modelos, aplicando la lógica y renderizando una plantilla para mostrar esa respuesta.
+        - *views.py*: Este el núcleo de nuestra aplicación. Acá tendremos la lógica que recibirá una solicitud o *"REQUEST"* enviada a nuestra APP y enviará la respectiva respuesta o *"RESPONSE"*. Esta estructura de trabajo responde al patrón de diseño *Modelo Vista Plantilla*, obteniendo data de los modelos, aplicando la lógica y renderizando una plantilla para mostrar esa respuesta.
     - Cuando la estructura de archivos de la aplicación ya ha sido generada, podemos iniciar el servidor de la aplicación, ejecutando el siguiente comando en el terminal:
     ```
     python manage.py runserver
