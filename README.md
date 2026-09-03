@@ -74,7 +74,8 @@ Como buenos desarrolladores, ya debemos tener creado un repositorio para trabaja
     django-admin startproject motor_django .
     ```
 
-    - Este comando creó la estructura de archivos de Django con nombre motor_django, el que Ud. puede cambiar al que guste. Debemos recordar que debe ser suficientemente descriptivo, por lo que es común usar el acrónimo *drf* que significaría *Django Rest Framework*.
+    - No debe olvidar el *PUNTO* al final del comando, para indicar que la carpeta de nuestro proyecto se debe crear en el directorio principal de trabajo.
+    - Este comando creó la estructura de archivos de Django con nombre *motor_django*, el que Ud. puede cambiar al que guste. Debemos recordar que debe ser suficientemente descriptivo, por lo que es común usar el acrónimo *drf* que significaría *Django Rest Framework*.
     - Este directorio contiene los archivos de configuración de Django, dentro de los que tenemos. 
         - *settings.py*, contiene configuraciones generales, como la conexión a base de datos.
         - *urls.py*, contiene las rutas para redirigir las solicitudes *REQUEST* que lleguen a la aplicación.
