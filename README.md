@@ -8,7 +8,7 @@ Como buenos desarrolladores, ya debemos tener creado un repositorio para trabaja
 ## Creación de Proyectos con Django
 
 1. **Creación de Ambiente Virtual**
-    - Un ambiente virtual mantendrá asilada toda la configuración de nuestro proyecto y su entorno de trabajo.
+    - Un ambiente virtual mantendrá aislada toda la configuración de nuestro proyecto y su entorno de trabajo.
     - Habiendo creado nuestro repositorio, abrimos la carpeta contenedora en VS Code.</li>
     - Iniciamos un nuevo terminal, estando ubicados en el directorio principal.</li>
     - Para crear el ambiente virtual, ejecutamos el siguiente comando en el terminal:
