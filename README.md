@@ -49,7 +49,7 @@ Como buenos desarrolladores, ya debemos tener creado un repositorio para trabaja
     cd..
     ```
 
-    - El comando *cd..* permite salir de un directorio y ubicarnos en el superior, por lo que deberíamos ejecutarlo 2 veces para llegar al directorio principal, saliendo de nombre_ambiente\Scripts.
+    - El comando *cd..* permite salir de un directorio y ubicarnos en el superior, por lo que deberíamos ejecutarlo 2 veces para llegar al directorio principal, saliendo de *nombre_ambiente\Scripts*.
 
 3. **Actualización de PIP**
     - A pesar de haber generado una instalación del entorno desde cero, no está asegurado que contenga la última versión de PIP, por lo que debemos actualizarlo.
