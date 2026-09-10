@@ -140,3 +140,25 @@ Como buenos desarrolladores, ya debemos tener creado un repositorio para trabaja
 7. **Página de Error 404 Genérica**
     - Si python NO encuentra un recurso (página) solicitado, arrojará una página de error con información del servidor, lo que involucra un serio problema de seguridad, al estar mostrando información del servidor.
     - Para evitarlo, debemos cargar un página genérica de error, lo que lograremos de la siguiente forma:
+        - Deshabilitamos el modo de pruebas de nuestra aplicación en *motor_django/settings.py*:
+        ```
+        DEBUG = False
+        ```
+
+        - Cuando el modo de pruebas se ha deshabilitado, ya no se verá la información del servidor al tratar de cargar un recurso que no existe, sino una página de Django que dice:
+        ```
+        Not Found
+        The requested resource was not found on this server.
+        ```
+
+        - Si la aplicación NO esta corriendo en modo de prueba, implica que está en modo productivo, lo que nos debería indicar que nuestro servidor local no debería funcionar. Para resolver esto, debemos AUTORIZAR nuestro servidor local, modificando *motor_django/settings.py*:
+        ```
+        ALLOWED_HOSTS = ['localhost','127.0.0.1']
+        ```
+
+        - Para que se muestre una página de error creada por nosotros, debemos tener un directorio *templates* en nuestra aplicación y dentro de ese directorio un archivo *html* de nombre *404*. Django buscará en este directorio ese archivo y lo cargará al no encontrar un recurso.
+
+8. **Modelo de Datos**
+    Django controlará la base de datos mediante el modelo de datos que nosotros crearemos.
+    Esto permitirá crear la migraciones, que son los scripts de bases de datos que crearán toda nuestra estructura de datos.
+    Para crear los modelos debemos modificar el archivo *nombre_aplicacion/models.py* y agregar las *clases* que hemos determinado para nuestro proyecto.
