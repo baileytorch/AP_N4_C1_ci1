@@ -8,7 +8,7 @@ Como buenos desarrolladores, ya debemos tener creado un repositorio para trabaja
 ## Creación de Proyectos con Django
 
 1. **Creación de Ambiente Virtual**
-    - Un ambiente virtual mantendrá asilada toda la configuración de nuestro proyecto y su entorno de trabajo.
+    - Un ambiente virtual mantendrá aislada toda la configuración de nuestro proyecto y su entorno de trabajo.
     - Habiendo creado nuestro repositorio, abrimos la carpeta contenedora en VS Code.</li>
     - Iniciamos un nuevo terminal, estando ubicados en el directorio principal.</li>
     - Para crear el ambiente virtual, ejecutamos el siguiente comando en el terminal:
@@ -49,7 +49,7 @@ Como buenos desarrolladores, ya debemos tener creado un repositorio para trabaja
     cd..
     ```
 
-    - El comando *cd..* permite salir de un directorio y ubicarnos en el superior, por lo que deberíamos ejecutarlo 2 veces para llegar al directorio principal, saliendo de nombre_ambiente\Scripts.
+    - El comando *cd..* permite salir de un directorio y ubicarnos en el superior, por lo que deberíamos ejecutarlo 2 veces para llegar al directorio principal, saliendo de *nombre_ambiente\Scripts*.
 
 3. **Actualización de PIP**
     - A pesar de haber generado una instalación del entorno desde cero, no está asegurado que contenga la última versión de PIP, por lo que debemos actualizarlo.
@@ -74,7 +74,8 @@ Como buenos desarrolladores, ya debemos tener creado un repositorio para trabaja
     django-admin startproject motor_django .
     ```
 
-    - Este comando creó la estructura de archivos de Django con nombre motor_django, el que Ud. puede cambiar al que guste. Debemos recordar que debe ser suficientemente descriptivo, por lo que es común usar el acrónimo *drf* que significaría *Django Rest Framework*.
+    - No debe olvidar el *PUNTO* al final del comando, para indicar que la carpeta de nuestro proyecto se debe crear en el directorio principal de trabajo.
+    - Este comando creó la estructura de archivos de Django con nombre *motor_django*, el que Ud. puede cambiar al que guste. Debemos recordar que debe ser suficientemente descriptivo, por lo que es común usar el acrónimo *drf* que significaría *Django Rest Framework*.
     - Este directorio contiene los archivos de configuración de Django, dentro de los que tenemos. 
         - *settings.py*, contiene configuraciones generales, como la conexión a base de datos.
         - *urls.py*, contiene las rutas para redirigir las solicitudes *REQUEST* que lleguen a la aplicación.
@@ -85,13 +86,13 @@ Como buenos desarrolladores, ya debemos tener creado un repositorio para trabaja
     django-admin startapp nombre_aplicacion
     ```
 
-    - El comando anterior creó un nuevo directorio llamado nombre_aplicacion, el que debería ser cambiado por un nombre descriptivo de su aplicación.
+    - El comando anterior creó un nuevo directorio llamado *nombre_aplicacion*, igual que en los casos anteriores, este nombre debería ser cambiado por un nombre descriptivo de su aplicación.
     - Dentro de este directorio encontraremos los archivos:
         - *admin.py*: Django posee un administrador que podría permitirnos hacer *CRUD* de nuestro modelo de datos y en este archivo registramos los elementos de nuestro modelo para permitirle al admin de Django realizar este proceso.
         - *apps.py*: Permite definir configuraciones específicas y metadatos de nuestra aplicación.
         - *models.py*: Permite definir el *MODELO DE DATOS* que soportará nuestra aplicación. Contiene clases que representan tablas de nuestra base de datos y que serán mapeadas por nuestro ORM (Object Relational Mapping).
-        - *tests.py*: Acá podremos definir nuestro *TESTS UNITARIOS* para validar automáticamente la lógica de nuestra aplicación y validar los modelos y vistas.
-        - *views.py*: Este el núcleo de nuestra aplicación. Aca tendremos la lógica que recibirá una solicitud *REQUEST* y enviará la respectiva respuesta *RESPONSE*. Responde al patrón de diseño *Modelo Vista Plantilla*, obteniendo data de los modelos, aplicando la lógica y renderizando una plantilla para mostrar esa respuesta.
+        - *tests.py*: Acá podremos definir nuestros *TESTS UNITARIOS* para validar automáticamente la lógica de nuestra aplicación, los modelos y las vistas.
+        - *views.py*: Este el núcleo de nuestra aplicación. Acá tendremos la lógica que recibirá una solicitud o *"REQUEST"* enviada a nuestra APP y enviará la respectiva respuesta o *"RESPONSE"*. Esta estructura de trabajo responde al patrón de diseño *Modelo Vista Plantilla*, obteniendo data de los modelos, aplicando la lógica y renderizando una plantilla para mostrar esa respuesta.
     - Cuando la estructura de archivos de la aplicación ya ha sido generada, podemos iniciar el servidor de la aplicación, ejecutando el siguiente comando en el terminal:
     ```
     python manage.py runserver
