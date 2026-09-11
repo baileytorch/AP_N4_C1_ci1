@@ -159,6 +159,22 @@ Como buenos desarrolladores, ya debemos tener creado un repositorio para trabaja
         - Para que se muestre una página de error creada por nosotros, debemos tener un directorio *templates* en nuestra aplicación y dentro de ese directorio un archivo *html* de nombre *404*. Django buscará en este directorio ese archivo y lo cargará al no encontrar un recurso.
 
 8. **Modelo de Datos**
-    Django controlará la base de datos mediante el modelo de datos que nosotros crearemos.
-    Esto permitirá crear la migraciones, que son los scripts de bases de datos que crearán toda nuestra estructura de datos.
+    - Django controlará la base de datos mediante migraciones, scripts de bases de datos que modificarán la estructura de datos.
+    - Django maneja varias tablas de manera predeterminada para información interna, para que se creen en la DB, debemos ejecutar el comando:
+    ```
+    python manage.py migrate
+    ```
+
+    - Este comando aplicó una serie de migraciones nativas de Django en la base de datos, como permisos, usuarios, autorizaciones, sesiones, etc...
+    - El siguiente paso es aplicar NUESTRO modelo a la base de datos, para lo que debemos CREAR una nueva migracion con el comando:
+    ```
+    python manage.py makemigrations
+    ```
+    - Una vez que se ha creado nuestra nueva migración, debemos aplicarla a la base de datos, ejecutando nuevamente el comando:
+    ```
+    python manage.py migrate
+    ```
+
+    >Cada vez que modifiquemos el modelo de datos, crearemos una nueva migración y la aplicaremos a la base de datos para que se actualice de acuerdo anuestro modelo.
+
     Para crear los modelos debemos modificar el archivo *nombre_aplicacion/models.py* y agregar las *clases* que hemos determinado para nuestro proyecto.
