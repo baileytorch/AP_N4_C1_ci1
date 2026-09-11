@@ -177,4 +177,28 @@ Como buenos desarrolladores, ya debemos tener creado un repositorio para trabaja
 
     >Cada vez que modifiquemos el modelo de datos, crearemos una nueva migración y la aplicaremos a la base de datos para que se actualice de acuerdo anuestro modelo.
 
-    Para crear los modelos debemos modificar el archivo *nombre_aplicacion/models.py* y agregar las *clases* que hemos determinado para nuestro proyecto.
+    - Para crear los modelos debemos modificar el archivo *nombre_aplicacion/models.py* y agregar las *clases* que hemos determinado para nuestro proyecto. Idealmente debiéramos tener un diagrama entidad-relación o uno de clases.
+    - Nuestras clases se crearán heredando desde *models* de Django, para poder acceder a los ditintos tipos de datos que deberá tener como atributos.
+    - Estructura de creación de una clase:
+    ```
+    class MiClase(models.Model):
+        atributo_1 = models.CharField(max_length=25,null=false)
+        atributo_2 = models.TextField(max_length=100,null=false)
+        atributo_3 = models.DateField(null=false)
+        atributo_4 = models.TimeField(null=false)
+        atributo_5 = models.DateTimeField(max_length=100,null=false)
+        atributo_6 = models.IntegerField()
+        atributo_7 = models.DecimalField()
+        atributo_8 = models.FloatField()
+        atributo_9 = models.EmailField()
+        atributo_10 = models.BooleanField(default=true)
+        atributo_11 = models.URLField(default=true)
+        created_at = models.DateTimeField(default=ahora)
+        updated_at = models.DateTimeField(auto_now=True)
+
+    class MiClase2(models.Model):
+        atributo_referenciado = models.ForeignKey(MiClase,on_delete=CASCADE)
+        atributo_2 = models.CharField(max_length=100)
+        created_at = models.DateTimeField(default=ahora)
+        updated_at = models.DateTimeField(auto_now=True)
+    ```
