@@ -12,7 +12,7 @@ str_telefono = "Teléfono"
 str_fecha_nac = "Fecha Nacimiento"
 
 class Pais(models.Model):
-    nombre = models.CharField("País",max_length=50,null=False)
+    nombre = models.CharField("País",max_length=60,null=False)
     nacionalidad = models.CharField("Nacionalidad",max_length=30,null=False)
     iso_2 = models.CharField("ISO 2",max_length=2,null=False)
     iso_3 = models.CharField("ISO 3",max_length=3,null=False)
