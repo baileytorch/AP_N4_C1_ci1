@@ -27,7 +27,7 @@ from .serializer import ComunaSerializer
 
 # Create your views here.
 def inicio(request):
-    return render(request,'inicio.html')
+    return render(request,'bienvenida.html')
 
 class PaisViewSet(viewsets.ModelViewSet):
     queryset = Pais.objects.all()
